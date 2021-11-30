@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,i,j,l;
+
+    scanf("%d",&t);
+    while(t--)
+    {
+        char s[1000];
+        scanf("%s",s);
+        int a[26]={0};
+        l=strlen(s);
+        for(i=0;i<l;i++)
+        {
+            a[(s[i]-'a')]++;
+        }
+        for(i=0;i<26;i++)
+        {
+            if(a[i]==0)continue;
+            printf("%c = %d\n",i+'a',a[i]);
+        }
+        printf("\n");
+    }
+}
