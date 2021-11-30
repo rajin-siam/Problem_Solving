@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n;char s[100];
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%s",&s);
+        n=strlen(s);
+        if((s[n-1]-'0')%2==0)printf("Even\n");
+        else printf("Odd\n");
+    }
+}
