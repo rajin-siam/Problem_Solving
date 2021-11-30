@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,j,t,k;
+    char s[100];
+    scanf("%d",&t);
+    for(j=1;j<=t;j++)
+    {
+        scanf("%s",s);
+        n=strlen(s);
+        printf("Sum = %d\n",(s[0]+s[n-1]-'0'-'0'));
+    }
+}
