@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,i,counter=0;
+    scanf("%d",&t);
+    cin.ignore();
+    while(t--)
+    {
+        char s[1000],ch;
+        counter=0;
+        fgets(s,100,stdin);
+        scanf("%c",&ch);
+        int l=strlen(s);
+        for(i=0;i<l;i++)
+        {
+
+            if(s[i]==ch)counter++;
+        }
+        if(counter>0)printf("Occurence of %c in %s = %d\n",ch,s,counter);
+        else printf("%c is not present\n",ch);
+    }
+}
+
