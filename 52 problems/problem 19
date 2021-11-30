@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n,i,counter=0;
+	char s[1001];
+	cin>>n;
+	cin.ignore();
+	while(n--){
+		fgets(s,100,stdin);
+		bool sign=true;
+		counter=0;
+		for(i=0;s[i]!='\0';i++){
+			if(s[i]>='a'&&s[i]<='z'||s[i]>='A'&&s[i]<='Z')sign=true;
+            else if(sign==true&&((s[i]<'a'||s[i]>'z')||(s[i]<'Z'||s[i]>'Z')))
+            {
+                sign=false;
+                counter++;
+            }
+		}
+		cout<<"Count = "<<counter<<endl;
+	}
+}
