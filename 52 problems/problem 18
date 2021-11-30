@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,i,counter=0,counter2=0;
+    scanf("%d",&t);
+    cin.ignore();
+    while(t--)
+    {
+        char s[100],s2[100],s3[100];
+        counter=0;
+        counter2=0;
+        fgets(s,100,stdin);
+        int l=strlen(s);
+        for(i=0;i<l;i++){
+            if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+                {
+                    s2[counter2++]=s[i];
+                }
+            else if(s[i]==' ')continue;
+            else s3[counter++]=s[i];
+        }
+        for(i=0;i<counter2;i++)printf("%c",s2[i]);printf("\n");
+        for(i=0;i<counter;i++)printf("%c",s3[i]);printf("\n");
+
+    }
+}
