@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+main()
+{
+    long long int a[3],big,small,n,i=1,t;
+    cin>>t;
+    while(t--)
+    {
+        n=3;
+        cin>>a[0]>>a[1]>>a[2];
+        printf("Case %lld: ",i);
+        big=*max_element(a,a+n);
+        small=*min_element(a,a+n);
+        n=a[0]+a[1]+a[2];
+        n=n-big-small;
+        cout<<n<<endl;
+        i++;
+    }
+
+}
